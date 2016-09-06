@@ -9,11 +9,11 @@
 
 ## 在cellForRowAtIndexPath方法里：
 
-//数据模型HZTheme
-     HZTheme *theme = [self.dataArray objectAtIndex:indexPath.row];
-     //除了其他数据额外添加两个image
-@property (nonatomic,assign) double image_H;
-@property (nonatomic,assign) double image_W;
+      //数据模型HZTheme
+       HZTheme *theme = [self.dataArray objectAtIndex:indexPath.row];
+      //除了其他数据额外添加两个image
+       @property (nonatomic,assign) double image_H;
+       @property (nonatomic,assign) double image_W;
 
      [tempImgView sd_setImageWithURL:[NSURL URLWithString:[NSString stringWithFormat:@"%@%@",AppInfoService,url]] placeholderImage:[UIImage imageNamed:@"acct_my_header_icon.jpg"] completed:^(UIImage *image, NSError *error, SDImageCacheType cacheType, NSURL *imageURL) {
                   DLog(@"=====%f====%f===",image.size.height,image.size.width);
